@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type="text/javascript">
+function setVC(){
+	var formobj = document.getElementById('data_form');
+	
+	var si = formobj.crtype.selectedIndex;
+	if(si==1) {
+		document.getElementById("vSpan").innerHTML = "<input type='text' id='cvo_id' name='cvo_id' value=''>";
+		
+	} else if (si==2) {
+		document.getElementById("vSpan").innerHTML = "<input type='password' id='cvo_id' name='cvo_id' value=''>";
+	}
+	document.getElementById("cvname").style.display="block";
+}
+</script>
+
+<body>
+        <form name="data_form" id="data_form">
+<div class="col-adj-res-sub">
+<select id="crtype" name="crtype" onchange="setVC()" class="form-control input_field select_dropdown sadd" title="ISSUE CREDIT NOTE">
+							    				<option value="0">SELECT</option>
+							    				<option value="1">India</option>
+							    				<option value="2">Pakistan</option>
+							    			</select>
+											</div>
+										
+											<div class="col-adj-res-sub" id="cvname">
+											<label>STATE:</label>
+											<span id="vSpan"></span>
+										</div>
+										</form>
+											
+</body>
+</html>
